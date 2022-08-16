@@ -5,7 +5,7 @@ import app from '../index';
 // create a request object
 const request = supertest(app);
 
-describe('Test image Resize end point', () => {
+describe('Test image Resize end point and controller', () => {
   it('test bad request without params', async () => {
     const response = await request.get('/api/image_resize');
     expect(response.status).toBe(400);

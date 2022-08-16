@@ -13,12 +13,12 @@ export const imageResizeController = async (
     const { error, value } = imageResizeSchema.validate(req.query);
 
     if (error) {
-      // console.log(error);
+       console.log(error);
       res.status(400).send('please enter valid params');
     } else {
-      let _height = parseInt(req.query.height as string);
-      let _width = parseInt(req.query.width as string);
-      let _name = req.query.name as string;
+      const _height = parseInt(req.query.height as string);
+      const _width = parseInt(req.query.width as string);
+      const _name = req.query.name as string;
 
       if (!checkIfImageExist(_name, _width, _height)) {
         const result: string = await resizeImage(_name, _width, _height);
