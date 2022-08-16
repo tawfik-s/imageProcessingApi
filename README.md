@@ -56,7 +56,7 @@ npm run lint
 (you can also use it without image format he will make it default jpg)
 
 ### scripts
--`npm run test` to test the project
+- `npm run test` to test the project
 - `npm run build` convert typescript to javascript in dist folder
 - `npm run run` build and run the project
 - `npm lint` run eslint
